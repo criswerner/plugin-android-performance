@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>com.cristianwer.plugin.android-performance-gfx</id>
+    <name>Android Performance GFX &amp; Perfetto</name>
+    <vendor email="support@example.com" url="https://example.com">Android Performance Team</vendor>
+
+    <description><![CDATA[
+    Plugin de Android Studio para analizar métricas de rendimiento gráfico (Slow Rendering, Frozen Frames) y capturar trazas para Perfetto.
+    <br/>
+    <b>Características principales:</b>
+    <ul>
+      <li>Detección de dispositivos Android conectados y emuladores.</li>
+      <li>Informe detallado de GFX con métricas de CPU y GPU (dumpsys gfxinfo).</li>
+      <li>Monitoreo de Slow Rendering (Slow UI Thread, Bitmap Uploads, Missed Vsync).</li>
+      <li>Conteo de Frozen Frames (>700ms).</li>
+      <li>Captura interactiva de trazas para Perfetto con botón Play/Stop.</li>
+    </ul>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="Android Performance GFX"
+                    anchor="right"
+                    secondary="true"
+                    icon="AllIcons.Actions.Execute"
+                    factoryClass="com.cristianwer.plugin.ui.PerformanceToolWindowFactory"/>
+    </extensions>
+</idea-plugin>

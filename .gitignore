@@ -1,0 +1,20 @@
+# Gradle build outputs and caches
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.properties
+
+# IntelliJ Platform plugin files and IDE settings
+.idea/
+*.iml
+.intellijPlatform/
+.kotlin/
+out/
+
+# macOS / System garbage
+.DS_Store
+Thumbs.db
+*~
+
+# Logs & temp files
+*.log
+captures/
