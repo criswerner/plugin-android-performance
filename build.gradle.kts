@@ -29,6 +29,10 @@ dependencies {
 intellijPlatform {
     pluginConfiguration {
         name = property("pluginName") as String
+        ideaVersion {
+            sinceBuild = "241"
+            untilBuild = provider { null }
+        }
     }
 }
 
@@ -38,7 +42,9 @@ tasks {
         targetCompatibility = "17"
     }
     withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = "17"
+        compilerOptions {
+            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+        }
     }
     test {
         useJUnitPlatform()
